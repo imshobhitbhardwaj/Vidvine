@@ -1,12 +1,12 @@
-# SceneZ 🎬  
+# BingerHub 🎬  
 ### Full Stack Video Streaming Platform
 
 <div align="center">
 
-![GitHub stars](https://img.shields.io/github/stars/imshobhitbhardwaj/SceneZ?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/imshobhitbhardwaj/SceneZ?style=for-the-badge)
-![GitHub repo size](https://img.shields.io/github/repo-size/imshobhitbhardwaj/SceneZ?style=for-the-badge)
-![License](https://img.shields.io/github/license/imshobhitbhardwaj/SceneZ?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/imshobhitbhardwaj/BingerHub?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/imshobhitbhardwaj/BingerHub?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/imshobhitbhardwaj/BingerHub?style=for-the-badge)
+![License](https://img.shields.io/github/license/imshobhitbhardwaj/BingerHub?style=for-the-badge)
 
 <br/>
 
@@ -20,7 +20,7 @@ Modern video streaming platform built with React, Node.js, MongoDB, and FFmpeg u
 
 # ✨ Overview
 
-**SceneZ** is a full stack video streaming application that allows users to upload videos, process them into HLS streaming format, and stream them through a responsive frontend interface.
+**BingerHub** is a full stack video streaming application that allows users to upload videos, process them into HLS streaming format, and stream them through a responsive frontend interface.
 
 The project focuses on real-world media streaming workflow implementation including:
 
@@ -71,7 +71,7 @@ The project focuses on real-world media streaming workflow implementation includ
 # 📂 Project Structure
 
 ```bash
-SceneZ/
+BingerHub/
 ├── backend
 │   ├── config
 │   │   └── db.js
@@ -112,8 +112,8 @@ SceneZ/
 ## 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/imshobhitbhardwaj/SceneZ.git
-cd SceneZ
+git clone https://github.com/imshobhitbhardwaj/BingerHub.git
+cd BingerHub
 ```
 
 ---
@@ -184,7 +184,7 @@ Frontend Streams Video
 
 # 🔥 HLS Streaming
 
-SceneZ uses **HTTP Live Streaming (HLS)** for delivering video content.
+BingerHub uses **HTTP Live Streaming (HLS)** for delivering video content.
 
 Generated streaming files include:
 - `.m3u8` playlist files
@@ -260,6 +260,6 @@ MIT License
 
 <div align="center">
 
-### 🎬 SceneZ — Video Streaming Infrastructure in Action
+### 🎬 BingerHub — Video Streaming Infrastructure in Action
 
 </div>
