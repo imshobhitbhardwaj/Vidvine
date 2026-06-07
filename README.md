@@ -1,12 +1,12 @@
-# BingerHub 🎬  
+# Vidvine 🎬  
 ### Full Stack Video Streaming Platform
 
 <div align="center">
 
-![GitHub stars](https://img.shields.io/github/stars/imshobhitbhardwaj/BingerHub?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/imshobhitbhardwaj/BingerHub?style=for-the-badge)
-![GitHub repo size](https://img.shields.io/github/repo-size/imshobhitbhardwaj/BingerHub?style=for-the-badge)
-![License](https://img.shields.io/github/license/imshobhitbhardwaj/BingerHub?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/imshobhitbhardwaj/Vidvine?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/imshobhitbhardwaj/Vidvine?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/imshobhitbhardwaj/Vidvine?style=for-the-badge)
+![License](https://img.shields.io/github/license/imshobhitbhardwaj/Vidvine?style=for-the-badge)
 
 <br/>
 
@@ -20,7 +20,7 @@ Modern video streaming platform built with React, Node.js, MongoDB, and FFmpeg u
 
 # ✨ Overview
 
-**BingerHub** is a full stack video streaming application that allows users to upload videos, process them into HLS streaming format, and stream them through a responsive frontend interface.
+**Vidvine** is a full stack video streaming application that allows users to upload videos, process them into HLS streaming format, and stream them through a responsive frontend interface.
 
 The project focuses on real-world media streaming workflow implementation including:
 
@@ -71,7 +71,7 @@ The project focuses on real-world media streaming workflow implementation includ
 # 📂 Project Structure
 
 ```bash
-BingerHub/
+Vidvine/
 ├── backend
 │   ├── config
 │   │   └── db.js
@@ -112,8 +112,8 @@ BingerHub/
 ## 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/imshobhitbhardwaj/BingerHub.git
-cd BingerHub
+git clone https://github.com/imshobhitbhardwaj/Vidvine.git
+cd Vidvine
 ```
 
 ---
@@ -184,7 +184,7 @@ Frontend Streams Video
 
 # 🔥 HLS Streaming
 
-BingerHub uses **HTTP Live Streaming (HLS)** for delivering video content.
+Vidvine uses **HTTP Live Streaming (HLS)** for delivering video content.
 
 Generated streaming files include:
 - `.m3u8` playlist files
@@ -260,6 +260,6 @@ MIT License
 
 <div align="center">
 
-### 🎬 BingerHub — Video Streaming Infrastructure in Action
+### 🎬 Vidvine — Video Streaming Infrastructure in Action
 
 </div>
