@@ -2,8 +2,13 @@ import axios from "axios";
 
 const API = "http://localhost:5000/api/videos";
 
-export const getVideos = async () => {
-  const res = await axios.get(`${API}/all`);
+export const getVideos = async (
+  search = ""
+) => {
+  const res = await axios.get(
+    `${API}/all?search=${search}`
+  );
+
   return res.data;
 };
 
