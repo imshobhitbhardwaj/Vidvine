@@ -35,11 +35,38 @@ router.post("/upload", upload.single("video"), async (req, res) => {
 
 router.get("/all", async (req, res) => {
   try {
-    const videos = await Video.find();
-    res.json(videos);
+    const search = req.query.search || "";
+
+  const videos = await Video.find({
+    title: {
+      $regex: search,
+      $options: "i",
+    },
+  });
+
+  res.json(videos);
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Server error" });
+  }
+});
+
+router.get("/:id", async (req, res) => {
+  try {
+    const video = await Video.findById(
+      req.params.id
+    );
+
+    if (!video)
+      return res
+        .status(404)
+        .json({ message: "Not found" });
+
+    res.json(video);
+  } catch (err) {
+    res.status(500).json({
+      message: "Server error",
+    });
   }
 });
 
