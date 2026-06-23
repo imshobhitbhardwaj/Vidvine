@@ -1,5 +1,5 @@
 node_modules/
-updateVideo.js
+updateVideos.js
 storage/originals/*
 storage/streams/*
 !.gitkeep
