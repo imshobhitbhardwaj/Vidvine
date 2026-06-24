@@ -12,21 +12,18 @@ function HomePage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      loadVideos();
-    }, 400);
-
-    return () => clearTimeout(timer);
-  }, [search]);
-
   const loadVideos = async () => {
-    setLoading(true);
-
     const data = await getVideos(search);
-
     setVideos(data);
     setLoading(false);
   };
+
+  const timer = setTimeout(() => {
+    loadVideos();
+  }, 400);
+
+  return () => clearTimeout(timer);
+}, [search]);
 
   const filteredVideos = videos.filter((video) =>
     video.title

@@ -17,7 +17,7 @@ function UploadPage() {
     formData.append("video", file);
 
     await axios.post(
-      "http://localhost:5000/api/videos/upload",
+      `${process.env.REACT_APP_API_URL}/api/videos/upload`,
       formData
     );
 
