@@ -17,16 +17,15 @@ function VideoPage() {
     useState(null);
 
   useEffect(() => {
-    fetchVideo();
-  }, []);
-
-  const fetchVideo = async () => {
+    const fetchVideo = async () => {
     const res = await axios.get(
-      `http://localhost:5000/api/videos/${id}`
+      `${process.env.REACT_APP_API_URL}/api/videos/${id}`
     );
 
     setVideo(res.data);
   };
+    fetchVideo();
+  }, [id]);
 
   if (!video) return <h2>Loading...</h2>;
 
