@@ -56,7 +56,7 @@ const segmentWatcher = fs.watch(outputDir, (eventType, filename) => {
     segmentWatcher.close();
     console.log("Transcoding finished:", videoIdStr);
 
-    const streamUrl = `http://localhost:5000/streams/${videoIdStr}/stream.m3u8`;
+    const streamUrl = `${process.env.BASE_URL}/streams/${videoIdStr}/stream.m3u8`;
     await Video.findByIdAndUpdate(videoId, { status: "ready", streamUrl });
     io.emit("transcoding-finished", { videoId: videoIdStr, streamUrl });
 
