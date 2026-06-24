@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:5000/api/videos";
+const API = `${process.env.REACT_APP_API_URL}/api/videos`;
 
 export const getVideos = async (
   search = ""
