@@ -2,14 +2,22 @@ const express = require("express");
 const router = express.Router();
 const multer = require("multer");
 const path = require("path");
+const fs = require("fs");
 const Video = require("../models/Video");
 const { transcodeVideo } = require("../services/transcoder");
 
+const originalsDir = path.join(__dirname, "../storage/originals");
+
+if (!fs.existsSync(originalsDir)) {
+  fs.mkdirSync(originalsDir, { recursive: true });
+}
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) =>
-    cb(null, path.join(__dirname, "../storage/originals")),
+    cb(null, originalsDir),
   filename: (req, file, cb) => cb(null, `${Date.now()}-${file.originalname}`),
 });
+
 const upload = multer({ storage });
 
 router.post("/upload", upload.single("video"), async (req, res) => {
