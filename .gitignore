@@ -1,0 +1,4 @@
+storage/originals/*
+storage/streams/*
+!storage/originals/.gitkeep
+!storage/streams/.gitkeep
