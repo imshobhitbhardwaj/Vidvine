@@ -1,265 +1,111 @@
-# Vidvine 🎬  
-### Full Stack Video Streaming Platform
+# Vidvine
 
-<div align="center">
+A full-stack video streaming application built with React, Node.js, Express, MongoDB, and FFmpeg. Vidvine allows users to upload videos, automatically converts them into HLS format for efficient streaming, stores video metadata, and provides a clean interface to browse and watch uploaded content.
 
-![GitHub stars](https://img.shields.io/github/stars/imshobhitbhardwaj/Vidvine?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/imshobhitbhardwaj/Vidvine?style=for-the-badge)
-![GitHub repo size](https://img.shields.io/github/repo-size/imshobhitbhardwaj/Vidvine?style=for-the-badge)
-![License](https://img.shields.io/github/license/imshobhitbhardwaj/Vidvine?style=for-the-badge)
-
-<br/>
-
-### 🚀 Upload • Transcode • Stream
-
-Modern video streaming platform built with React, Node.js, MongoDB, and FFmpeg using HLS streaming architecture.
-
-</div>
+The project was built to understand the complete workflow behind modern video streaming platforms, from uploading and processing videos to delivering them through HTTP Live Streaming (HLS).
 
 ---
 
-# ✨ Overview
+## Features
 
-**Vidvine** is a full stack video streaming application that allows users to upload videos, process them into HLS streaming format, and stream them through a responsive frontend interface.
-
-The project focuses on real-world media streaming workflow implementation including:
-
-- Video uploads
-- FFmpeg transcoding
-- HLS stream generation
-- Backend media processing
-- Responsive frontend playback
-- Event-driven transcoding updates
-
----
-
-# 🎯 Features
-
-- 📤 Video Upload System
-- 🎞️ HLS Video Streaming
-- ⚡ FFmpeg Transcoding
-- 📡 Real-time Transcoding Updates
-- 🎥 Custom Video Player
-- 📱 Responsive Frontend UI
-- 🗂️ Media Storage Management
-- 🔗 REST API Architecture
+- Upload video files
+- Automatic video processing using FFmpeg
+- HLS (.m3u8 and .ts) generation for streaming
+- Stream videos using a custom React player
+- Browse all uploaded videos
+- Individual video playback page
+- Search videos by title
+- Light and Dark theme support
+- Video metadata stored in MongoDB
+- RESTful API for video management
 
 ---
 
-# 🛠️ Tech Stack
+## Tech Stack
 
-## Frontend
-- React.js
-- JavaScript
-- CSS3
-- HTML5
+### Frontend
 
-## Backend
+- React
+- React Router
+- Axios
+- CSS
+
+### Backend
+
 - Node.js
 - Express.js
-
-## Database
 - MongoDB
 - Mongoose
-
-## Video Processing
+- Multer
 - FFmpeg
-- HLS Streaming (`.m3u8` + `.ts segments`)
 
 ---
 
-# 📂 Project Structure
+## Project Structure
 
-```bash
+```
 Vidvine/
-├── backend
-│   ├── config
-│   │   └── db.js
-│   ├── controllers
-│   │   └── videoController.js
-│   ├── models
-│   │   └── Video.js
-│   ├── routes
-│   │   └── videoRoutes.js
-│   ├── services
-│   │   └── transcoder.js
-│   ├── storage
-│   │   ├── originals
-│   │   └── streams
-│   ├── server.js
-│   └── updateVideos.js
-│
-└── frontend
-    ├── public
-    │   ├── index.html
-    │   ├── manifest.json
-    │   └── robots.txt
-    └── src
-        ├── hooks
-        │   └── useTranscodingEvents.js
-        ├── App.css
-        ├── App.js
-        ├── index.css
-        ├── index.js
-        ├── Player.js
-        └── Upload.js
+├── backend/
+├── frontend/
+└── README.md
 ```
 
 ---
 
-# ⚙️ Installation
+## How It Works
 
-## 1️⃣ Clone Repository
+1. Upload a video through the web application.
+2. The backend receives and stores the original video.
+3. FFmpeg converts the uploaded video into HLS format.
+4. Video metadata is saved in MongoDB.
+5. The frontend fetches available videos from the backend.
+6. Users can browse and stream videos directly in the browser.
+
+---
+
+## Installation
+
+### Clone the repository
 
 ```bash
 git clone https://github.com/imshobhitbhardwaj/Vidvine.git
 cd Vidvine
 ```
 
----
-
-## 2️⃣ Install Dependencies
-
 ### Backend
 
 ```bash
 cd backend
 npm install
+npm start
 ```
 
 ### Frontend
 
 ```bash
-cd ../frontend
-npm install
-```
-
----
-
-# ▶️ Running the Project
-
-## Start Backend
-
-```bash
-cd backend
-npm start
-```
-
-## Start Frontend
-
-```bash
 cd frontend
+npm install
 npm start
 ```
 
 ---
 
-# 🎥 Streaming Workflow
+## Future Improvements
 
-```text
-User Uploads Video
-        ↓
-Backend Receives File
-        ↓
-FFmpeg Transcodes Video
-        ↓
-HLS Segments Generated
-        ↓
-Stored in /storage/streams
-        ↓
-Frontend Streams Video
-```
-
----
-
-# 📸 Frontend Highlights
-
-- Responsive video player
-- Dynamic stream playback
-- Upload interface
-- Clean React component structure
-- Event-driven transcoding updates
-
----
-
-# 🔥 HLS Streaming
-
-Vidvine uses **HTTP Live Streaming (HLS)** for delivering video content.
-
-Generated streaming files include:
-- `.m3u8` playlist files
-- `.ts` media segments
-
-This architecture is widely used in modern streaming platforms for efficient media delivery.
-
----
-
-# 🔐 Backend Architecture
-
-The backend follows a modular structure using:
-
-- Controllers
-- Routes
-- Services
-- Database Models
-- Dedicated transcoding service
-
-This improves scalability and maintainability.
-
----
-
-# 🚀 Future Improvements
-
-- Multi-quality adaptive streaming
-- Authentication system
+- User authentication
+- User profiles
 - Video thumbnails
-- Upload progress tracking
-- Cloud storage integration
-- User dashboard
 - Watch history
+- Likes and comments
+- Playlists
+- Adaptive bitrate streaming
+- Cloud storage integration
+- Video recommendations
 
 ---
 
-# 🤝 Contributing
+## Author
 
-```bash
-git checkout -b feature/new-feature
-git commit -m "Add new feature"
-git push origin feature/new-feature
-```
+**Shobhit Bhardwaj**
 
-Create a Pull Request 🚀
-
----
-
-# 👨‍💻 Author
-
-## Shobhit Bhardwaj
-
-- GitHub: [@imshobhitbhardwaj](https://github.com/imshobhitbhardwaj)
-- LinkedIn: [Shobhit Bhardwaj](https://linkedin.com/in/imshobhitbhardwaj)
-
----
-
-# ⭐ Support
-
-If you like this project:
-
-- ⭐ Star the repository
-- 🍴 Fork it
-- 🐛 Report issues
-- 🚀 Contribute improvements
-
----
-
-# 📄 License
-
-MIT License
-
----
-
-<div align="center">
-
-### 🎬 Vidvine — Video Streaming Infrastructure in Action
-
-</div>
+Computer Science Engineering Student passionate about Full Stack Development and Backend Systems.
