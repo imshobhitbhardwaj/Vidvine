@@ -107,5 +107,3 @@ npm start
 ## Author
 
 **Shobhit Bhardwaj**
-
-Computer Science Engineering Student passionate about Full Stack Development and Backend Systems.
